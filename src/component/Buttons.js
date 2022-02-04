@@ -6,7 +6,7 @@ export default function Buttons() {
   return (
     <>
       {/* Button */}
-      <Grid justifyContent="right">
+      <Grid container justifyContent="right">
         <Grid item align="right">
           <Button
             variant="contained"
@@ -15,7 +15,7 @@ export default function Buttons() {
               mt: 5,
               mb: 3,
               mr: {
-                lg: 7,
+                lg: 10,
               },
               width: "50",
               height: "50",

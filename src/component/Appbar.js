@@ -11,10 +11,10 @@ export default function Appbar() {
         position="fixed"
         elevation="none"
         sx={{
-          xs: 12,
-          bgcolor: "#249EA0",
           width: "100%",
           height: "55px",
+          bgcolor: "#249EA0",
+          xs: 12,
         }}
       >
         <Box sx={{ width: "100%" }}>
@@ -23,7 +23,7 @@ export default function Appbar() {
               color: "#fff",
               "&:hover, &.Mui-focusVisible": {
                 background: "transparent",
-                borderRadius: "0%",
+                borderRadius: 0,
               },
             }}
           >

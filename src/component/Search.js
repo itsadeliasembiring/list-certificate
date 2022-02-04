@@ -1,13 +1,6 @@
 import React from "react";
 // Import Component MUI
-import {
-  Grid,
-  IconButton,
-  InputAdornment,
-  TextField,
-  // InputBase,
-} from "@mui/material";
-
+import { Grid, IconButton, InputAdornment, TextField } from "@mui/material";
 // Import Icon
 import SearchIcon from "@mui/icons-material/Search";
 import "boxicons";
@@ -15,10 +8,9 @@ import "boxicons";
 export default function Search() {
   return (
     <>
-      {/* Search & Icon Button Setting */}
       <Grid container direction="row">
         {/* Search */}
-        <Grid item xs={11}>
+        <Grid item xs={10.7}>
           <TextField
             placeholder="Search"
             InputProps={{
@@ -40,11 +32,19 @@ export default function Search() {
                 {
                   borderColor: "#249EA0",
                 },
+              // "&.MuiInputBase-root.Mui-focused .MuiInputBase-formControl .MuiInputBase-adornedStart 	.MuiInputBase-input":
+              //   {
+              //     background: "#000",
+              //   },
+              "& input::placeholder": {
+                fontSize: "17px",
+              },
             }}
           />
         </Grid>
-        {/* Icon Button */}
-        <Grid item xs={1} color="#0000008A">
+
+        {/* Button Setting */}
+        <Grid item xs={1.3}>
           <IconButton>
             <box-icon name="slider-alt" size="md" />
           </IconButton>
