@@ -11,10 +11,10 @@ export default function Appbar() {
         position="fixed"
         elevation="none"
         sx={{
+          xs: 12,
           width: "100%",
           height: "55px",
           bgcolor: "#249EA0",
-          xs: 12,
         }}
       >
         <Box sx={{ width: "100%" }}>
