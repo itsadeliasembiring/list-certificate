@@ -1,22 +1,22 @@
 import React from "react";
-import Appbar from "./component/Appbar";
-import Search from "./component/Search";
-import Card from "./component/Card";
-import Buttons from "./component/Buttons";
-import { Container, Box } from "@mui/material";
+import Navbar from "./component/Navbar/Navbar";
+import ListSertifikat from "./component/ListSertifikat/ListSertifikat";
+import DetailSertifikat from "./component/DetailSertifikat/DetailSertifikat";
+import TambahSertifikat from "./component/TambahSertifikat/TambahSertifikat";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <Container>
-        <Appbar />
-        <Box sx={{ mt: 10 }}>
-          <Search />
-          <Card />
-          <Buttons />
-        </Box>
-      </Container>
-    </div>
+    <Router>
+      <div className="App">
+        <Navbar />
+        <Switch>
+          <Route path="/" exact component={ListSertifikat} />
+          <Route path="/detailsertifikat" component={DetailSertifikat} />
+          <Route path="/tambahsertifikat" component={TambahSertifikat} />
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
