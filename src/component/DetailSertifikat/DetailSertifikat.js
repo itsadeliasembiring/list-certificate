@@ -3,8 +3,7 @@ import React from "react";
 import { Box, Button, Grid, Container } from "@mui/material";
 // Import Component
 import Navbar from "../Navbar/Navbar";
-// Import Card Data
-// import lotsOfData from "../ListSertifikat/CardData";
+// Import Image
 import sertifikat1 from "../../assets/images/sertifikat1.png";
 
 export default function DetailSertifikat() {

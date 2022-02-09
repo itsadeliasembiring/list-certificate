@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 // Import Component MUI
 import {
   Button,
@@ -10,41 +10,103 @@ import {
 } from "@mui/material";
 // Import Icon
 import AddPhotoAlternateOutlinedIcon from "@mui/icons-material/AddPhotoAlternateOutlined";
+import CancelOutlinedIcon from "@mui/icons-material/CancelOutlined";
 // Import Component
 import Navbar from "../Navbar/Navbar";
 
 export default function TambahSertifikat() {
-  const handleImageChange = (e) => {};
+  const [imgPreview, setImgPreview] = useState(null);
+  const [error, setError] = useState(false);
+
+  const handleImageChange = (e) => {
+    setError(false);
+    const selected = e.target.files[0];
+    const ALLOWED_TYPES = ["image/png", "image/jpeg", "image/jpg"];
+    if (selected && ALLOWED_TYPES.includes(selected.type)) {
+      let reader = new FileReader();
+      reader.onloadend = () => {
+        setImgPreview(reader.result);
+      };
+      reader.readAsDataURL(selected);
+    } else {
+      setError(true);
+    }
+  };
 
   return (
     <>
       <Container>
         <Navbar>Tambah Sertifikat</Navbar>
 
-        <Grid container sx={{ mt: 7 }} spacing={2} align={"center"}>
-          {/* Upload File Gambar */}
-          <Grid item xs={12}>
-            <IconButton
-              sx={{
-                color: "#249EA0",
-              }}
-              component="label"
-            >
-              {/* Icon */}
-              <AddPhotoAlternateOutlinedIcon sx={{ fontSize: 150 }} />
-              <input
-                type="file"
-                hidden
-                accept=".jpg,.jpeg,.png"
-                onChange={handleImageChange}
-              />
-            </IconButton>
-            <Typography sx={{ color: "#444" }}>
-              {" "}
-              Click to upload image
-            </Typography>
-          </Grid>
+        {/* Upload File Image */}
+        <div className="container" style={{ marginTop: 70 }}>
+          {/* Delete gImage */}
+          <div align={"right"}>
+            {imgPreview && (
+              <IconButton
+                onClick={() => setImgPreview(null)}
+                variant="contained"
+                color="error"
+                sx={{
+                  height: 45,
+                  fontSize: 15,
+                  mb: -7,
+                }}
+              >
+                <CancelOutlinedIcon />
+              </IconButton>
+            )}
+          </div>
 
+          {/* Image Preview */}
+          <div
+            className="imgPreview"
+            style={{
+              background: imgPreview
+                ? `url("${imgPreview}") no-repeat center/cover`
+                : "transparent",
+              width: "100%",
+              height: "250px",
+            }}
+            align={"center"}
+          >
+            {!imgPreview && (
+              <>
+                <IconButton
+                  sx={{
+                    color: "#249EA0",
+                  }}
+                  component="label"
+                  htmlFor="fileUpload"
+                  className="customFileUpload"
+                >
+                  {/* Icon */}
+                  <AddPhotoAlternateOutlinedIcon
+                    sx={{
+                      height: "80%",
+                      width: "80%",
+                    }}
+                  />
+                  <input
+                    type="file"
+                    hidden
+                    id="fileUpload"
+                    onChange={handleImageChange}
+                  />
+                </IconButton>
+              </>
+            )}
+
+            {/* Error */}
+            {error && (
+              <Typography className="errorMsg" sx={{ color: "red", mt: -2 }}>
+                File not supported!
+              </Typography>
+            )}
+          </div>
+        </div>
+
+        <Grid container sx={{ mt: 1 }} spacing={2} align={"center"}>
           {/* Nama Events */}
           <Grid item xs={12}>
             <TextField
