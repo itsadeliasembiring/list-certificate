@@ -6,6 +6,7 @@ import { CardActionArea } from "@mui/material";
 import sertifikat from "../../assets/images/sertifikat.png";
 // Import Card Data
 import lotsOfData from "./CardData";
+
 import { Link } from "react-router-dom";
 const Data = () => {
   return (

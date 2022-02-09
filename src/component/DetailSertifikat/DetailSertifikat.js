@@ -1,21 +1,14 @@
 import React from "react";
 // Import Component MUI
-import {
-  AppBar,
-  Box,
-  Button,
-  Grid,
-  IconButton,
-  Typography,
-  Container,
-} from "@mui/material";
+import { AppBar, Box, Button, Grid, Container } from "@mui/material";
 // Import Icon
-import ArrowBackTwoToneIcon from "@mui/icons-material/ArrowBackTwoTone";
 import sertifikat from "../../assets/images/sertifikat.png";
 
 export default function DetailSertifikat() {
+  document.body.style.backgroundColor = "#D3D3D3";
+
   return (
-    <>
+    <div>
       {/* Sertifikat */}
       <Box
         sx={{ mt: 25, mb: 15, justifyContent: "center", alignItems: "center" }}
@@ -42,6 +35,6 @@ export default function DetailSertifikat() {
           </Grid>
         </Grid>
       </Container>
-    </>
+    </div>
   );
 }

@@ -18,6 +18,8 @@ import CardSertifikat from "./CardSertifikat";
 import { Link } from "react-router-dom";
 
 export default function ListSertifikat() {
+  document.body.style.backgroundColor = "#fff";
+
   return (
     <>
       <Container>
@@ -78,6 +80,7 @@ export default function ListSertifikat() {
                   color="warning"
                   sx={{
                     mt: 5,
+                    mb: 3,
                     mr: {
                       lg: 10,
                     },
