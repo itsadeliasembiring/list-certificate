@@ -1,13 +1,26 @@
 import React from "react";
 // Import Component MUI
-import { Button, Container, IconButton, Grid, TextField } from "@mui/material";
+import {
+  Button,
+  Container,
+  IconButton,
+  Grid,
+  TextField,
+  Typography,
+} from "@mui/material";
 // Import Icon
 import AddPhotoAlternateOutlinedIcon from "@mui/icons-material/AddPhotoAlternateOutlined";
+// Import Component
+import Navbar from "../Navbar/Navbar";
 
 export default function TambahSertifikat() {
+  const handleImageChange = (e) => {};
+
   return (
     <>
       <Container>
+        <Navbar>Tambah Sertifikat</Navbar>
+
         <Grid container sx={{ mt: 7 }} spacing={2} align={"center"}>
           {/* Upload File Gambar */}
           <Grid item xs={12}>
@@ -19,8 +32,17 @@ export default function TambahSertifikat() {
             >
               {/* Icon */}
               <AddPhotoAlternateOutlinedIcon sx={{ fontSize: 150 }} />
-              <input type="file" hidden />
+              <input
+                type="file"
+                hidden
+                accept=".jpg,.jpeg,.png"
+                onChange={handleImageChange}
+              />
             </IconButton>
+            <Typography sx={{ color: "#444" }}>
+              {" "}
+              Click to upload image
+            </Typography>
           </Grid>
 
           {/* Nama Events */}

@@ -1,19 +1,24 @@
 import React from "react";
 // Import Component MUI
-import { AppBar, Box, Button, Grid, Container } from "@mui/material";
-// Import Icon
-import sertifikat from "../../assets/images/sertifikat.png";
+import { Box, Button, Grid, Container } from "@mui/material";
+// Import Component
+import Navbar from "../Navbar/Navbar";
+// Import Card Data
+// import lotsOfData from "../ListSertifikat/CardData";
+import sertifikat1 from "../../assets/images/sertifikat1.png";
 
 export default function DetailSertifikat() {
   document.body.style.backgroundColor = "#D3D3D3";
 
   return (
     <div>
+      <Navbar>Detail Sertifikat</Navbar>
+
       {/* Sertifikat */}
       <Box
         sx={{ mt: 25, mb: 15, justifyContent: "center", alignItems: "center" }}
       >
-        <img src={sertifikat} width={"100%"} heigth={100} />
+        <img src={sertifikat1} width={"100%"} heigth={100} />
       </Box>
 
       {/* Button Download*/}

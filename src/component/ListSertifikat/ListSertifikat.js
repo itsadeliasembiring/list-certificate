@@ -14,6 +14,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import TuneIcon from "@mui/icons-material/Tune";
 // Import Component
 import CardSertifikat from "./CardSertifikat";
+import Navbar from "../Navbar/Navbar";
 // Import React router
 import { Link } from "react-router-dom";
 
@@ -23,6 +24,7 @@ export default function ListSertifikat() {
   return (
     <>
       <Container>
+        <Navbar>Sertifikat</Navbar>
         <Box sx={{ mt: 9 }}>
           <Grid container direction="row">
             {/* Search */}

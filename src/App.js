@@ -9,7 +9,6 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Navbar />
         <Switch>
           <Route path="/" exact component={ListSertifikat} />
           <Route path="/detailsertifikat" component={DetailSertifikat} />

@@ -5,7 +5,7 @@ import { AppBar, Box, IconButton, Typography } from "@mui/material";
 import ArrowBackTwoToneIcon from "@mui/icons-material/ArrowBackTwoTone";
 import { Link } from "react-router-dom";
 
-export default function Navbar() {
+export default function Navbar(props) {
   return (
     <>
       <AppBar
@@ -17,7 +17,6 @@ export default function Navbar() {
           height: "55px",
           bgcolor: "#249EA0",
         }}
-        s
       >
         <Box
           sx={{
@@ -43,7 +42,9 @@ export default function Navbar() {
           </Link>
 
           {/* Title */}
-          <Typography sx={{ fontSize: 18, pt: 1.7 }}>Sertifikat</Typography>
+          <Typography sx={{ fontSize: 18, pt: 1.7 }}>
+            {props.children}
+          </Typography>
         </Box>
       </AppBar>
     </>
