@@ -24,7 +24,10 @@ const Data = () => {
         >
           {/* Card*/}
           <Grid item xs={12} md={6} xl={6}>
-            <Link to="/detailsertifikat" style={{ textDecoration: "none" }}>
+            <Link
+              to={`/detail-sertifikat/${data.id}`}
+              style={{ textDecoration: "none" }}
+            >
               <Card
                 sx={{
                   width: {
@@ -41,7 +44,7 @@ const Data = () => {
                 <CardActionArea>
                   <CardMedia
                     component="img"
-                    image={data.img}
+                    image={data.id}
                     alt="sertifikat"
                     sx={{
                       height: {

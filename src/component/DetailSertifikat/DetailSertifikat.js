@@ -3,21 +3,22 @@ import React from "react";
 import { Box, Button, Grid, Container } from "@mui/material";
 // Import Component
 import Navbar from "../Navbar/Navbar";
-// Import Image
-import sertifikat1 from "../../assets/images/sertifikat1.png";
+import { useParams } from "react-router-dom";
 
-export default function DetailSertifikat() {
+const DetailSertifikat = () => {
+  const { id } = useParams();
+
   document.body.style.backgroundColor = "#D3D3D3";
+  console.log("id", id);
 
   return (
     <div>
       <Navbar>Detail Sertifikat</Navbar>
-
       {/* Sertifikat */}
       <Box
         sx={{ mt: 25, mb: 15, justifyContent: "center", alignItems: "center" }}
       >
-        <img src={sertifikat1} width={"100%"} heigth={100} />
+        <img src={id} width={"100%"} heigth={100} />
       </Box>
 
       {/* Button Download*/}
@@ -41,4 +42,5 @@ export default function DetailSertifikat() {
       </Container>
     </div>
   );
-}
+};
+export default DetailSertifikat;

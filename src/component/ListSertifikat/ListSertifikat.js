@@ -75,7 +75,7 @@ export default function ListSertifikat() {
           {/* Button */}
           <Grid container justifyContent="right">
             <Grid item align="right">
-              <Link to="/tambahsertifikat" style={{ textDecoration: "none" }}>
+              <Link to="/tambah" style={{ textDecoration: "none" }}>
                 <Button
                   onClick
                   variant="contained"

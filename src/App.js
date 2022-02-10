@@ -11,8 +11,8 @@ function App() {
       <div className="App">
         <Switch>
           <Route path="/" exact component={ListSertifikat} />
-          <Route path="/detailsertifikat" component={DetailSertifikat} />
-          <Route path="/tambahsertifikat" component={TambahSertifikat} />
+          <Route path="/detail-sertifikat/:id" component={DetailSertifikat} />
+          <Route path="/tambah" component={TambahSertifikat} />
         </Switch>
       </div>
     </Router>
