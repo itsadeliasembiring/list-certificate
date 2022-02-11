@@ -13,12 +13,14 @@ import {
 import SearchIcon from "@mui/icons-material/Search";
 import TuneIcon from "@mui/icons-material/Tune";
 // Import Component
-import CardSertifikat from "./CardSertifikat";
-import Navbar from "../Navbar/Navbar";
+import Navbar from "../component/Navbar";
+import CardSertificate from "../component/CardSertificate";
 // Import React router
 import { Link } from "react-router-dom";
+// Import Card Data
+import lotsOfData from "../component/CardData";
 
-export default function ListSertifikat() {
+const ListSertificate = () => {
   document.body.style.backgroundColor = "#fff";
 
   return (
@@ -35,7 +37,7 @@ export default function ListSertifikat() {
                   startAdornment: (
                     <InputAdornment position="start">
                       <IconButton>
-                        <SearchIcon sx={{ fontSize: 30, color: "#249EA0" }} />
+                        <SearchIcon sx={{ fontSize: 30, color: "#D3D3D3" }} />
                       </IconButton>
                     </InputAdornment>
                   ),
@@ -47,16 +49,16 @@ export default function ListSertifikat() {
                 sx={{
                   width: "100%",
                   "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
-                    border: "solid #249EA0",
+                    border: "solid #D3D3D3",
                     borderRadius: 7,
                   },
                   "&:hover .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline":
                     {
-                      borderColor: "#249EA0",
+                      borderColor: "#D3D3D3",
                     },
                   "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":
                     {
-                      borderColor: "#249EA0",
+                      borderColor: "#D3D3D3",
                     },
                 }}
               />
@@ -65,17 +67,29 @@ export default function ListSertifikat() {
             {/* Button Setting */}
             <Grid item xs={1.3}>
               <IconButton>
-                <TuneIcon sx={{ fontSize: 35, color: "#249EA0" }} />
+                <TuneIcon sx={{ fontSize: 35, color: "#D3D3D3" }} />
               </IconButton>
             </Grid>
           </Grid>
 
-          <CardSertifikat />
+          {/* Card Sertificate */}
+          {lotsOfData.map((data) => (
+            <Link
+              to={`/detail-sertificate/${data.id}`}
+              style={{ textDecoration: "none" }}
+            >
+              <CardSertificate
+                img={data.img}
+                description={data.description}
+                date={data.date}
+              />
+            </Link>
+          ))}
 
-          {/* Button */}
+          {/* Button Add Certificate*/}
           <Grid container justifyContent="right">
             <Grid item align="right">
-              <Link to="/tambah" style={{ textDecoration: "none" }}>
+              <Link to="/add-sertificate" style={{ textDecoration: "none" }}>
                 <Button
                   onClick
                   variant="contained"
@@ -101,4 +115,5 @@ export default function ListSertifikat() {
       </Container>
     </>
   );
-}
+};
+export default ListSertificate;

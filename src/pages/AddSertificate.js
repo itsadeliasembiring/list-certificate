@@ -12,12 +12,13 @@ import {
 import AddPhotoAlternateOutlinedIcon from "@mui/icons-material/AddPhotoAlternateOutlined";
 import CancelOutlinedIcon from "@mui/icons-material/CancelOutlined";
 // Import Component
-import Navbar from "../Navbar/Navbar";
+import Navbar from "../component/Navbar";
 
-export default function TambahSertifikat() {
+export default function AddSertificate() {
   const [imgPreview, setImgPreview] = useState(null);
   const [error, setError] = useState(false);
 
+  // handleImageChange
   const handleImageChange = (e) => {
     setError(false);
     const selected = e.target.files[0];
@@ -120,16 +121,16 @@ export default function TambahSertifikat() {
               sx={{
                 width: "100%",
                 "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
-                  border: "solid #249EA0",
+                  border: "solid #D3D3D3",
                   borderRadius: 2,
                 },
                 "&:hover .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline":
                   {
-                    borderColor: "#249EA0",
+                    borderColor: "#D3D3D3",
                   },
                 "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":
                   {
-                    borderColor: "#249EA0",
+                    borderColor: "#D3D3D3",
                   },
               }}
             />
@@ -148,16 +149,16 @@ export default function TambahSertifikat() {
               sx={{
                 width: "100%",
                 "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
-                  border: "solid #249EA0",
+                  border: "solid #D3D3D3",
                   borderRadius: 2,
                 },
                 "&:hover .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline":
                   {
-                    borderColor: "#249EA0",
+                    borderColor: "#D3D3D3",
                   },
                 "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":
                   {
-                    borderColor: "#249EA0",
+                    borderColor: "#D3D3D3",
                   },
               }}
             />
@@ -176,16 +177,16 @@ export default function TambahSertifikat() {
               sx={{
                 width: "100%",
                 "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
-                  border: "solid #249EA0",
+                  border: "solid #D3D3D3",
                   borderRadius: 2,
                 },
                 "&:hover .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline":
                   {
-                    borderColor: "#249EA0",
+                    borderColor: "#D3D3D3",
                   },
                 "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":
                   {
-                    borderColor: "#249EA0",
+                    borderColor: "#D3D3D3",
                   },
               }}
             />
@@ -204,16 +205,16 @@ export default function TambahSertifikat() {
               sx={{
                 width: "100%",
                 "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
-                  border: "solid #249EA0",
+                  border: "solid #D3D3D3",
                   borderRadius: 2,
                 },
                 "&:hover .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline":
                   {
-                    borderColor: "#249EA0",
+                    borderColor: "#D3D3D3",
                   },
                 "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":
                   {
-                    borderColor: "#249EA0",
+                    borderColor: "#D3D3D3",
                   },
               }}
             />
@@ -233,16 +234,16 @@ export default function TambahSertifikat() {
                 width: "100%",
                 mb: 5,
                 "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
-                  border: "solid #249EA0",
+                  border: "solid #D3D3D3",
                   borderRadius: 2,
                 },
                 "&:hover .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline":
                   {
-                    borderColor: "#249EA0",
+                    borderColor: "#D3D3D3",
                   },
                 "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":
                   {
-                    borderColor: "#249EA0",
+                    borderColor: "#D3D3D3",
                   },
               }}
             />
