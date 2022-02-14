@@ -4,6 +4,8 @@ import { AppBar, Box, IconButton, Typography } from "@mui/material";
 // Import Icon
 import ArrowBackTwoToneIcon from "@mui/icons-material/ArrowBackTwoTone";
 import { Link } from "react-router-dom";
+// Import Theme
+import Colors from "../Theme/Color";
 
 export default function Navbar(props) {
   return (
@@ -12,10 +14,10 @@ export default function Navbar(props) {
         position="fixed"
         elevation="none"
         sx={{
-          xs: 12,
           width: "100%",
           height: "55px",
-          bgcolor: "#249EA0",
+          alignItem: "center",
+          bgcolor: Colors.navbarColor,
         }}
       >
         <Box
@@ -26,15 +28,14 @@ export default function Navbar(props) {
           }}
         >
           <Link to="/">
+            {/* Icon */}
             <IconButton
+              onClick
               sx={{
-                color: "#fff",
                 pt: 1.5,
-                mr: 1,
-                "&:hover, &.Mui-focusVisible": {
-                  background: "transparent",
-                  borderRadius: 0,
-                },
+                mr: 0.5,
+                ml: 0.5,
+                color: Colors.white,
               }}
             >
               <ArrowBackTwoToneIcon sx={{ fontSize: 30 }} />

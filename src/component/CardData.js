@@ -1,6 +1,6 @@
 // Import Image
-import sertifikat1 from "../assets/images/sertifikat1.png";
-import sertifikat2 from "../assets/images/sertifikat2.png";
+import sertifikat1 from "../Assets/Images/sertifikat1.png";
+import sertifikat2 from "../Assets/Images/sertifikat2.png";
 
 const lotsOfData = [
   {

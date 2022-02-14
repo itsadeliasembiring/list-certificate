@@ -1,7 +1,7 @@
 import React from "react";
-import ListSertificate from "./pages/ListSertificate";
-import DetailSertificate from "./pages/DetailSertificate";
-import AddSertificate from "./pages/AddSertificate";
+import ListCertificate from "./Pages/ListCertificate";
+import DetailCertificate from "./Pages/DetailCertificate";
+import AddCertificate from "./Pages/AddCertificate";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
@@ -9,9 +9,9 @@ function App() {
     <Router>
       <div className="App">
         <Switch>
-          <Route path="/" exact component={ListSertificate} />
-          <Route path="/detail-sertificate/:id" component={DetailSertificate} />
-          <Route path="/add-sertificate" component={AddSertificate} />
+          <Route path="/" exact component={ListCertificate} />
+          <Route path="/detail-certificate/:id" component={DetailCertificate} />
+          <Route path="/add-certificate" component={AddCertificate} />
         </Switch>
       </div>
     </Router>
