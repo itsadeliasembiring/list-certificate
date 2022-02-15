@@ -97,12 +97,12 @@ export default function AddSertificate() {
               }}
             />
           </Grid>
+        </Grid>
 
-          {/* Input File */}
-          <Grid item align={"left"}>
-            <UploadFileButton />
-          </Grid>
+        {/* Input File */}
+        <UploadFileButton />
 
+        <Grid Container>
           <Grid item xs={12}>
             {/* Button  */}
             <Button
