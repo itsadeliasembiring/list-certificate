@@ -1,13 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 // Import Component MUI
-import {
-  Button,
-  Container,
-  IconButton,
-  Grid,
-  TextField,
-  Typography,
-} from "@mui/material";
+import { Button, Container, Grid, TextField, Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 // Import Icon
 import AddIcon from "@mui/icons-material/Add";
@@ -15,6 +8,7 @@ import AddIcon from "@mui/icons-material/Add";
 import Navbar from "../Component/Navbar";
 // Import Theme
 import Colors from "../Theme/Color";
+import UploadFileButton from "../Component/UploadFileButton";
 
 export default function AddSertificate() {
   // Costum TextField
@@ -106,11 +100,11 @@ export default function AddSertificate() {
 
           {/* Input File */}
           <Grid item align={"left"}>
-            <input type="file" />
+            <UploadFileButton />
           </Grid>
 
-          {/* Button  */}
           <Grid item xs={12}>
+            {/* Button  */}
             <Button
               variant="contained"
               color="warning"
@@ -120,7 +114,6 @@ export default function AddSertificate() {
                 fontSize: 15,
                 textTransform: "capitalize",
                 mt: 1,
-                mb: 1,
               }}
             >
               Submit
