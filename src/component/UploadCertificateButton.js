@@ -5,6 +5,7 @@ import AddIcon from "@mui/icons-material/Add";
 import { styled } from "@mui/material/styles";
 // Import Theme
 import Colors from "../Theme/Color";
+
 function UploadFile() {
   // State to store uploaded file
   const [file, setFile] = React.useState("");
@@ -14,6 +15,7 @@ function UploadFile() {
     setFile(event.target.files[0]);
   }
 
+  // Costum Button
   const UploadButton = styled(Button)(({ theme }) => ({
     color: theme.palette.getContrastText(Colors.lightGray),
     backgroundColor: Colors.lightGray,
@@ -30,13 +32,14 @@ function UploadFile() {
         Container
         sx={{ display: "flex", mt: 2, mb: 0.5, alignItems: "center" }}
       >
+        {/* Button */}
         <Grid item sx={{ mr: 2 }}>
           <input
             type="file"
             accept=".png, .jpg, .jpeg"
-            onChange={handleUpload}
             id="buttonfile"
             hidden
+            onChange={handleUpload}
           />
           <label htmlFor="buttonfile">
             <UploadButton
@@ -50,17 +53,21 @@ function UploadFile() {
           </label>
         </Grid>
 
+        {/* File Name */}
         <Grid item>
-          <Typography fontWeight={"bold"}>{file.name}</Typography>
+          <Typography fontSize={13} fontWeight={"bold"}>
+            {file.name}
+          </Typography>
         </Grid>
       </Grid>
 
-      <Typography fontSize={12} fontStyle={"italic"}>
+      {/* Format description */}
+      <Typography fontSize={12} fontStyle={"italic"} color={"red"}>
         *Format: PNG, JPG, JPEG
       </Typography>
     </>
   );
 }
-export default function UploadFileButton() {
+export default function UploadCertificateButton() {
   return <UploadFile />;
 }

@@ -23,6 +23,7 @@ import { Link } from "react-router-dom";
 import Colors from "../Theme/Color";
 
 const ListCertificate = () => {
+  // BgColor
   document.body.style.backgroundColor = Colors.white;
 
   return (

@@ -1,16 +1,18 @@
 import React from "react";
 // Import Component MUI
-import { Box, Button, Grid, Container } from "@mui/material";
+import { Box, Button, Container, Grid } from "@mui/material";
 // Import Component
 import Navbar from "../Component/Navbar";
-import { useParams } from "react-router-dom";
 // Import Card Data
 import lotsOfData from "../Component/CardData";
+// Import Router & Packages
+import { useParams } from "react-router-dom";
+import { saveAs } from "file-saver";
 // Import Theme
 import Colors from "../Theme/Color";
-import { saveAs } from "file-saver";
 
 const DetailCertificate = () => {
+  // BgColor
   document.body.style.backgroundColor = Colors.lightGray;
 
   // Route params
@@ -26,10 +28,10 @@ const DetailCertificate = () => {
   };
 
   return (
-    <div>
+    <>
       <Navbar>Detail Sertifikat</Navbar>
 
-      {/* Image Sertifikat */}
+      {/* Image Certificate */}
       <Box
         sx={{ mt: 25, mb: 15, justifyContent: "center", alignItems: "center" }}
       >
@@ -57,7 +59,7 @@ const DetailCertificate = () => {
           </Grid>
         </Grid>
       </Container>
-    </div>
+    </>
   );
 };
 
