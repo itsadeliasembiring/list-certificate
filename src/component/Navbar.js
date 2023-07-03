@@ -41,7 +41,6 @@ export default function Navbar(props) {
               <ArrowBackTwoToneIcon sx={{ fontSize: 30 }} />
             </IconButton>
           </Link>
-
           {/* Title */}
           <Typography sx={{ fontSize: 18, pt: 1.7 }}>
             {props.children}
